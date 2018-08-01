@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.dommy.loading.SimpleRoundActivity">
+
+    <include layout="@layout/toolbar_title_back" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dip"
+        android:gravity="center">
+
+        <com.dommy.loading.widget.SimpleRoundProgress
+            android:id="@+id/srp_stroke_0"
+            android:layout_width="100dip"
+            android:layout_height="100dip"
+            android:layout_gravity="center"
+            app:srp_max="100"
+            app:srp_progressColor="@color/red_web"
+            app:srp_roundColor="@color/pro_bg"
+            app:srp_roundWidth="6dip"
+            app:srp_startAngle="0"
+            app:srp_style="STROKE" />
+
+        <com.dommy.loading.widget.SimpleRoundProgress
+            android:id="@+id/srp_stroke_135"
+            android:layout_width="100dip"
+            android:layout_height="100dip"
+            android:layout_gravity="center"
+            android:layout_margin="10dip"
+            app:srp_max="100"
+            app:srp_progressColor="@color/red_web"
+            app:srp_roundColor="@color/pro_bg"
+            app:srp_roundWidth="10dip"
+            app:srp_startAngle="135"
+            app:srp_style="STROKE" />
+
+        <com.dommy.loading.widget.SimpleRoundProgress
+            android:id="@+id/srp_fill"
+            android:layout_width="100dip"
+            android:layout_height="100dip"
+            android:layout_gravity="center"
+            app:srp_max="100"
+            app:srp_progressColor="@color/red_web"
+            app:srp_roundColor="@color/pro_bg"
+            app:srp_startAngle="135"
+            app:srp_style="FILL" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <com.dommy.loading.widget.SimpleRoundProgress
+            android:id="@+id/srp_stroke_0_inner"
+            android:layout_width="100dip"
+            android:layout_height="100dip"
+            android:layout_gravity="center"
+            app:srp_max="100"
+            app:srp_progressColor="@color/red_web"
+            app:srp_progressWidth="2dip"
+            app:srp_roundColor="@color/pro_bg"
+            app:srp_roundWidth="6dip"
+            app:srp_startAngle="0"
+            app:srp_style="STROKE" />
+
+        <com.dommy.loading.widget.SimpleRoundProgress
+            android:id="@+id/srp_stroke_135_inner"
+            android:layout_width="100dip"
+            android:layout_height="100dip"
+            android:layout_gravity="center"
+            android:layout_margin="10dip"
+            app:srp_max="100"
+            app:srp_progressColor="@color/red_web"
+            app:srp_progressWidth="4dip"
+            app:srp_roundColor="@color/pro_bg"
+            app:srp_roundWidth="10dip"
+            app:srp_startAngle="135"
+            app:srp_style="STROKE" />
+
+        <com.dommy.loading.widget.SimpleRoundProgress
+            android:id="@+id/srp_fill_inner"
+            android:layout_width="100dip"
+            android:layout_height="100dip"
+            android:layout_gravity="center"
+            app:srp_max="100"
+            app:srp_progressColor="@color/red_web"
+            app:srp_progressWidth="3dip"
+            app:srp_roundColor="@color/pro_bg"
+            app:srp_roundWidth="10dip"
+            app:srp_startAngle="135"
+            app:srp_style="FILL" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txt_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dip"
+        android:text="进度值"
+        android:textColor="@color/red_web"
+        android:textSize="15sp" />
+</LinearLayout>

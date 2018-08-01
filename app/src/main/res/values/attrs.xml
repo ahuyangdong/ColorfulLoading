@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <!--简单环形进度-->
+    <declare-styleable name="SimpleRoundProgress">
+        <!--圆环颜色-->
+        <attr name="srp_roundColor" format="color" />
+        <!--圆环的宽度-->
+        <attr name="srp_roundWidth" format="dimension" />
+        <!--圆环上的进度颜色-->
+        <attr name="srp_progressColor" format="color" />
+        <!--圆环上的进度宽度-->
+        <attr name="srp_progressWidth" format="dimension" />
+        <!--进度值的最大值，一般为100-->
+        <attr name="srp_max" format="integer" />
+        <!--开始角度，指定进度初始点的绘制位置-->
+        <attr name="srp_startAngle" format="integer" />
+        <!--样式，空心还是实心-->
+        <attr name="srp_style">
+            <enum name="STROKE" value="0" />
+            <enum name="FILL" value="1" />
+        </attr>
+    </declare-styleable>
+
+    <!--配文字环形进度-->
+    <declare-styleable name="TextRoundProgress">
+        <!--圆环颜色-->
+        <attr name="trp_roundColor" format="color" />
+        <!--圆环的宽度-->
+        <attr name="trp_roundWidth" format="dimension" />
+        <!--圆环上的进度颜色-->
+        <attr name="trp_progressColor" format="color" />
+        <!--圆环上的进度宽度-->
+        <attr name="trp_progressWidth" format="dimension" />
+        <!--文字内容-->
+        <attr name="trp_text" format="string" />
+        <!--文字指示颜色-->
+        <attr name="trp_textColor" format="color" />
+        <!--文字指示字体大小-->
+        <attr name="trp_textSize" format="dimension" />
+        <!--数字指示字体大小-->
+        <attr name="trp_numSize" format="dimension" />
+        <!--进度值的最大值，一般为100-->
+        <attr name="trp_max" format="integer" />
+        <!--是否显示文字指示内容-->
+        <attr name="trp_textShow" format="boolean" />
+        <!--开始角度，指定进度初始点的绘制位置-->
+        <attr name="trp_startAngle" format="integer" />
+        <!--是否使用自定义字体-->
+        <attr name="trp_userCustomFont" format="boolean" />
+    </declare-styleable>
+</resources>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.dommy.loading.TextRoundActivity">
+
+    <include layout="@layout/toolbar_title_back" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dip"
+        android:gravity="center">
+
+        <com.dommy.loading.widget.TextRoundProgress
+            android:id="@+id/trp_0"
+            android:layout_width="100dip"
+            android:layout_height="100dip"
+            android:layout_gravity="center"
+            app:trp_max="100"
+            app:trp_numSize="22sp"
+            app:trp_progressColor="@color/red_web"
+            app:trp_roundColor="@color/pro_bg"
+            app:trp_roundWidth="6dip"
+            app:trp_startAngle="0"
+            app:trp_text="空气质量"
+            app:trp_textColor="@color/red_web"
+            app:trp_textSize="10sp" />
+
+        <com.dommy.loading.widget.TextRoundProgress
+            android:id="@+id/trp_135"
+            android:layout_width="100dip"
+            android:layout_height="100dip"
+            android:layout_gravity="center"
+            android:layout_margin="10dip"
+            app:trp_max="100"
+            app:trp_numSize="18sp"
+            app:trp_progressColor="@color/red_web"
+            app:trp_roundColor="@color/pro_bg"
+            app:trp_roundWidth="10dip"
+            app:trp_startAngle="135"
+            app:trp_text="水质量"
+            app:trp_textColor="@color/red_web"
+            app:trp_textSize="13sp" />
+
+        <com.dommy.loading.widget.TextRoundProgress
+            android:id="@+id/trp_135_empty"
+            android:layout_width="100dip"
+            android:layout_height="100dip"
+            android:layout_gravity="center"
+            app:trp_max="100"
+            app:trp_progressColor="@color/red_web"
+            app:trp_roundColor="@color/pro_bg"
+            app:trp_roundWidth="10dip"
+            app:trp_startAngle="135"
+            app:trp_textShow="false" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <com.dommy.loading.widget.TextRoundProgress
+            android:id="@+id/trp_135_custom"
+            android:layout_width="100dip"
+            android:layout_height="100dip"
+            android:layout_gravity="center"
+            android:layout_margin="10dip"
+            app:trp_max="100"
+            app:trp_numSize="18sp"
+            app:trp_progressColor="@color/red_web"
+            app:trp_roundColor="@color/pro_bg"
+            app:trp_roundWidth="10dip"
+            app:trp_startAngle="135"
+            app:trp_text="水质量"
+            app:trp_textColor="@color/red_web"
+            app:trp_textSize="13sp"
+            app:trp_userCustomFont="true" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txt_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dip"
+        android:text="进度值"
+        android:textColor="@color/red_web"
+        android:textSize="15sp" />
+</LinearLayout>
