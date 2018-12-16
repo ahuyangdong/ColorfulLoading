@@ -15,7 +15,7 @@ import com.dommy.loading.util.DividerGridItemDecoration;
  * 主界面
  */
 public class MainActivity extends AppCompatActivity {
-    private int[] ICONS = new int[]{R.drawable.home_icon_1, R.drawable.home_icon_2, R.drawable.home_icon_3, R.drawable.building, R.drawable.building
+    private int[] ICONS = new int[]{R.drawable.home_icon_1, R.drawable.home_icon_2, R.drawable.home_icon_3, R.drawable.home_icon_4, R.drawable.building
             , R.drawable.building, R.drawable.building, R.drawable.building, R.drawable.building, R.drawable.building, R.drawable.building
             , R.drawable.building};
 

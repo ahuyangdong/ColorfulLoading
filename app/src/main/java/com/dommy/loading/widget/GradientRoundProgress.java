@@ -31,11 +31,10 @@ public class GradientRoundProgress extends View {
     private int startAngle; // 进度条起始角度
     private boolean textShow; // 是否显示中间的进度
     private boolean useCustomFont; // 是否使用自定义字体
+    private int startColor; // 渐变色起始色
+    private int midColor; // 渐变色中间色
+    private int endColor; // 渐变色起始色
     private int progress; // 当前进度
-
-    private String COLOR_GRA_START = "#f25453"; // 渐变色起始色
-    private String COLOR_GRA_MID = "#ffdc18"; // 渐变色中间色
-    private String COLOR_GRA_END = "#1aac19"; // 渐变色起始色
 
     public GradientRoundProgress(Context context) {
         this(context, null);
@@ -51,21 +50,24 @@ public class GradientRoundProgress extends View {
         paint = new Paint();
 
         // 读取自定义属性的值
-        TypedArray mTypedArray = context.obtainStyledAttributes(attrs, R.styleable.TextRoundProgress);
+        TypedArray mTypedArray = context.obtainStyledAttributes(attrs, R.styleable.GradientRoundProgress);
 
         // 获取自定义属性和默认值
-        roundColor = mTypedArray.getColor(R.styleable.TextRoundProgress_trp_roundColor, Color.RED);
-        roundWidth = mTypedArray.getDimension(R.styleable.TextRoundProgress_trp_roundWidth, 5);
-        progressColor = mTypedArray.getColor(R.styleable.TextRoundProgress_trp_progressColor, Color.GREEN);
-        progressWidth = mTypedArray.getDimension(R.styleable.TextRoundProgress_trp_progressWidth, roundWidth);
-        text = mTypedArray.getString(R.styleable.TextRoundProgress_trp_text);
-        textColor = mTypedArray.getColor(R.styleable.TextRoundProgress_trp_textColor, Color.GREEN);
-        textSize = mTypedArray.getDimension(R.styleable.TextRoundProgress_trp_textSize, 11);
-        numSize = mTypedArray.getDimension(R.styleable.TextRoundProgress_trp_numSize, 14);
-        max = mTypedArray.getInteger(R.styleable.TextRoundProgress_trp_max, 100);
-        startAngle = mTypedArray.getInt(R.styleable.TextRoundProgress_trp_startAngle, 90);
-        textShow = mTypedArray.getBoolean(R.styleable.TextRoundProgress_trp_textShow, true);
-        useCustomFont = mTypedArray.getBoolean(R.styleable.TextRoundProgress_trp_userCustomFont, false);
+        roundColor = mTypedArray.getColor(R.styleable.GradientRoundProgress_grp_roundColor, Color.RED);
+        roundWidth = mTypedArray.getDimension(R.styleable.GradientRoundProgress_grp_roundWidth, 5);
+        progressColor = mTypedArray.getColor(R.styleable.GradientRoundProgress_grp_progressColor, Color.GREEN);
+        progressWidth = mTypedArray.getDimension(R.styleable.GradientRoundProgress_grp_progressWidth, roundWidth);
+        text = mTypedArray.getString(R.styleable.GradientRoundProgress_grp_text);
+        textColor = mTypedArray.getColor(R.styleable.GradientRoundProgress_grp_textColor, Color.GREEN);
+        textSize = mTypedArray.getDimension(R.styleable.GradientRoundProgress_grp_textSize, 11);
+        numSize = mTypedArray.getDimension(R.styleable.GradientRoundProgress_grp_numSize, 14);
+        max = mTypedArray.getInteger(R.styleable.GradientRoundProgress_grp_max, 100);
+        startAngle = mTypedArray.getInt(R.styleable.GradientRoundProgress_grp_startAngle, 90);
+        textShow = mTypedArray.getBoolean(R.styleable.GradientRoundProgress_grp_textShow, true);
+        useCustomFont = mTypedArray.getBoolean(R.styleable.GradientRoundProgress_grp_userCustomFont, false);
+        startColor = mTypedArray.getColor(R.styleable.GradientRoundProgress_grp_startColor, Color.GREEN);
+        midColor = mTypedArray.getColor(R.styleable.GradientRoundProgress_grp_midColor, Color.GREEN);
+        endColor = mTypedArray.getColor(R.styleable.GradientRoundProgress_grp_endColor, Color.GREEN);
         mTypedArray.recycle();
     }
 
@@ -94,8 +96,7 @@ public class GradientRoundProgress extends View {
 
         int sweepAngle = 360 * progress / max; // 计算进度值在圆环所占的角度
         // 根据进度画圆弧
-        paint.setShader(new SweepGradient(centerX, centerX, new int[] { Color.parseColor(COLOR_GRA_START),Color.parseColor(COLOR_GRA_MID),
-                Color.parseColor(COLOR_GRA_END) }, null));
+        paint.setShader(new SweepGradient(centerX, centerX, new int[]{startColor, midColor, endColor}, null));
         canvas.drawArc(oval, 0, sweepAngle, false, paint);
         paint.setShader(null);
         canvas.rotate(-startAngle, centerX, centerX);

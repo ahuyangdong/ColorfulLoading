@@ -14,4 +14,7 @@
 
     <color name="red_web">#ff8080</color>
     <color name="pro_bg">#ecf0f1</color>
+    <color name="gr_start">#f25453</color>
+    <color name="gr_mid">#ffdc18</color>
+    <color name="gr_end">#1aac19</color>
 </resources>

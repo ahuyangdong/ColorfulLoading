@@ -17,47 +17,56 @@
         android:gravity="center">
 
         <com.dommy.loading.widget.GradientRoundProgress
-            android:id="@+id/trp_0"
+            android:id="@+id/grp_0"
             android:layout_width="100dip"
             android:layout_height="100dip"
             android:layout_gravity="center"
-            app:trp_max="100"
-            app:trp_numSize="22sp"
-            app:trp_progressColor="@color/red_web"
-            app:trp_roundColor="@color/pro_bg"
-            app:trp_roundWidth="6dip"
-            app:trp_startAngle="0"
-            app:trp_text="空气质量"
-            app:trp_textColor="@color/red_web"
-            app:trp_textSize="10sp" />
+            app:grp_endColor="@color/gr_end"
+            app:grp_midColor="@color/gr_mid"
+            app:grp_startColor="@color/gr_start"
+            app:grp_max="100"
+            app:grp_numSize="22sp"
+            app:grp_progressColor="@color/red_web"
+            app:grp_roundColor="@color/pro_bg"
+            app:grp_roundWidth="6dip"
+            app:grp_startAngle="0"
+            app:grp_text="空气质量"
+            app:grp_textColor="@color/red_web"
+            app:grp_textSize="10sp" />
 
         <com.dommy.loading.widget.GradientRoundProgress
-            android:id="@+id/trp_135"
+            android:id="@+id/grp_135"
             android:layout_width="100dip"
             android:layout_height="100dip"
             android:layout_gravity="center"
             android:layout_margin="10dip"
-            app:trp_max="100"
-            app:trp_numSize="18sp"
-            app:trp_progressColor="@color/red_web"
-            app:trp_roundColor="@color/pro_bg"
-            app:trp_roundWidth="10dip"
-            app:trp_startAngle="135"
-            app:trp_text="水质量"
-            app:trp_textColor="@color/red_web"
-            app:trp_textSize="13sp" />
+            app:grp_endColor="@color/gr_end"
+            app:grp_midColor="@color/gr_mid"
+            app:grp_startColor="@color/gr_start"
+            app:grp_max="100"
+            app:grp_numSize="18sp"
+            app:grp_progressColor="@color/red_web"
+            app:grp_roundColor="@color/pro_bg"
+            app:grp_roundWidth="10dip"
+            app:grp_startAngle="135"
+            app:grp_text="水质量"
+            app:grp_textColor="@color/red_web"
+            app:grp_textSize="13sp" />
 
         <com.dommy.loading.widget.GradientRoundProgress
-            android:id="@+id/trp_135_empty"
+            android:id="@+id/grp_135_empty"
             android:layout_width="100dip"
             android:layout_height="100dip"
             android:layout_gravity="center"
-            app:trp_max="100"
-            app:trp_progressColor="@color/red_web"
-            app:trp_roundColor="@color/pro_bg"
-            app:trp_roundWidth="10dip"
-            app:trp_startAngle="135"
-            app:trp_textShow="false" />
+            app:grp_endColor="@color/gr_end"
+            app:grp_midColor="@color/gr_mid"
+            app:grp_startColor="@color/gr_start"
+            app:grp_max="100"
+            app:grp_progressColor="@color/red_web"
+            app:grp_roundColor="@color/pro_bg"
+            app:grp_roundWidth="10dip"
+            app:grp_startAngle="135"
+            app:grp_textShow="false" />
     </LinearLayout>
 
     <LinearLayout
@@ -66,21 +75,24 @@
         android:gravity="center">
 
         <com.dommy.loading.widget.GradientRoundProgress
-            android:id="@+id/trp_135_custom"
+            android:id="@+id/grp_135_custom"
             android:layout_width="100dip"
             android:layout_height="100dip"
             android:layout_gravity="center"
             android:layout_margin="10dip"
-            app:trp_max="100"
-            app:trp_numSize="18sp"
-            app:trp_progressColor="@color/red_web"
-            app:trp_roundColor="@color/pro_bg"
-            app:trp_roundWidth="10dip"
-            app:trp_startAngle="135"
-            app:trp_text="水质量"
-            app:trp_textColor="@color/red_web"
-            app:trp_textSize="13sp"
-            app:trp_userCustomFont="true" />
+            app:grp_endColor="@color/gr_end"
+            app:grp_midColor="@color/gr_mid"
+            app:grp_startColor="@color/gr_start"
+            app:grp_max="100"
+            app:grp_numSize="18sp"
+            app:grp_progressColor="@color/red_web"
+            app:grp_roundColor="@color/pro_bg"
+            app:grp_roundWidth="10dip"
+            app:grp_startAngle="135"
+            app:grp_text="水质量"
+            app:grp_textColor="@color/red_web"
+            app:grp_textSize="13sp"
+            app:grp_userCustomFont="true" />
 
     </LinearLayout>
 

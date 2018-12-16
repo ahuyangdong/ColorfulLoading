@@ -22,10 +22,10 @@ public class GradientRoundActivity extends AppCompatActivity {
     private TextView tvTiltle; // 标题
     private ImageButton btnBack; // 返回按钮
 
-    private GradientRoundProgress trp0; // 起始角度设置为0
-    private GradientRoundProgress trp135; // 起始角度设置为135
-    private GradientRoundProgress trp135Empty; // 起始角度设置为135-不带文字
-    private GradientRoundProgress trp135Custom; // 起始角度设置为135-使用自定义字体
+    private GradientRoundProgress grp0; // 起始角度设置为0
+    private GradientRoundProgress grp135; // 起始角度设置为135
+    private GradientRoundProgress grp135Empty; // 起始角度设置为135-不带文字
+    private GradientRoundProgress grp135Custom; // 起始角度设置为135-使用自定义字体
     private TextView tvProgress; // 进度提示
 
     private Handler handler = new Handler() {
@@ -34,10 +34,10 @@ public class GradientRoundActivity extends AppCompatActivity {
             super.handleMessage(msg);
             switch (msg.what) {
                 case MSG_REFRESH_PROGRESS:
-                    trp0.setProgress(msg.arg1);
-                    trp135.setProgress(msg.arg1);
-                    trp135Empty.setProgress(msg.arg1);
-                    trp135Custom.setProgress(msg.arg1);
+                    grp0.setProgress(msg.arg1);
+                    grp135.setProgress(msg.arg1);
+                    grp135Empty.setProgress(msg.arg1);
+                    grp135Custom.setProgress(msg.arg1);
 
                     tvProgress.setText("进度值：" + msg.arg1);
                     break;
@@ -57,14 +57,14 @@ public class GradientRoundActivity extends AppCompatActivity {
 
     private void initView() {
         tvTiltle = (TextView) findViewById(R.id.txt_title);
-        tvTiltle.setText("配文字环形进度条");
+        tvTiltle.setText("渐变色环形进度条");
         btnBack = (ImageButton) findViewById(R.id.btn_back);
         btnBack.setOnClickListener(new BtnBackListener(this));
 
-        trp0 = (GradientRoundProgress) findViewById(R.id.trp_0);
-        trp135 = (GradientRoundProgress) findViewById(R.id.trp_135);
-        trp135Empty = (GradientRoundProgress) findViewById(R.id.trp_135_empty);
-        trp135Custom = (GradientRoundProgress) findViewById(R.id.trp_135_custom);
+        grp0 = (GradientRoundProgress) findViewById(R.id.grp_0);
+        grp135 = (GradientRoundProgress) findViewById(R.id.grp_135);
+        grp135Empty = (GradientRoundProgress) findViewById(R.id.grp_135_empty);
+        grp135Custom = (GradientRoundProgress) findViewById(R.id.grp_135_custom);
 
         tvProgress = (TextView) findViewById(R.id.txt_progress);
     }
