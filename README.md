@@ -13,4 +13,4 @@ Android custom loading views, with different appearence
 Android花样loading进度条
 
 ## 博客讲解
-https://blog.csdn.net/column/details/26656.html
+https://blog.csdn.net/ahuyangdong/article/category/9278422
